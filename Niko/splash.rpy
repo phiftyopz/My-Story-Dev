@@ -4,9 +4,11 @@
 ## If not, display an error message and quit.
 init -100 python:
     #Check for each archive needed
+    # PLEASE DO NOT EDIT ARCHIVE CHECK! IF YOU TELL THE GAME TO CHECK FOR SCRIPTS.RPA,
+    # IT WILL INSTANTLY CRASH THE GAME!!!
     for archive in ['audio','images','fonts']:
         if not archive in config.archives:
-            #If one is missing, throw an error and chlose
+            #If one is missing, throw an error and close
             renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
 
 ## First, a disclaimer declaring this is a mod is shown, then there is a
@@ -19,8 +21,7 @@ init python:
     splash_message_default = "My Story is an unofficial fan work, unaffiliated with Team Salvato."
     #Optional splash messages, originally chosen at random in Act 2 and Act 3
     splash_messages = [
-    "Please support Doki Doki Literature Club."
-    "Monika is watching you code."
+    ""
     ]
 
 image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign=0.5)
