@@ -4,12 +4,15 @@
 ## If not, display an error message and quit.
 init -100 python:
     #Check for each archive needed
-    # PLEASE DO NOT EDIT ARCHIVE CHECK! IF YOU TELL THE GAME TO CHECK FOR SCRIPTS.RPA,
+    # PLEASE DO NOT EDIT THIS ARCHIVE CHECK! IF YOU TELL THE GAME TO CHECK FOR SCRIPTS.RPA HERE,
     # IT WILL INSTANTLY CRASH THE GAME!!!
     for archive in ['audio','images','fonts']:
         if not archive in config.archives:
             #If one is missing, throw an error and close
             renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
+    for archive in ['scripts']:
+        if archive in config.archives:
+            renpy.error("scripts.rpa detected. The mod will not work properly if scripts.rpa exists.")
 
 ## First, a disclaimer declaring this is a mod is shown, then there is a
 ## check for the original DDLC assets in the install folder. If those are
@@ -51,35 +54,35 @@ image menu_fade:
 
 image menu_art_y:
     subpixel True
-    "gui/menu_art_y.png"
+    "gui/poemgame/y_sticker_2.png"
     xcenter 600
     ycenter 335
-    zoom 0.60
-    menu_art_move(0.54, 600, 0.60)
+    zoom 1.10
+    menu_art_move(0.54, 600, 1.10)
 
 image menu_art_n:
     subpixel True
-    "gui/menu_art_n.png"
+    "gui/poemgame/n_sticker_1.png"
     xcenter 750
     ycenter 385
-    zoom 0.58
-    menu_art_move(0.58, 750, 0.58)
+    zoom 1.08
+    menu_art_move(0.58, 750, 1.08)
 
 image menu_art_s:
     subpixel True
-    "gui/menu_art_s.png"
+    "gui/poemgame/s_sticker_1.png"
     xcenter 510
     ycenter 500
-    zoom 0.68
-    menu_art_move(0.68, 510, 0.68)
+    zoom 1.18
+    menu_art_move(0.68, 510, 1.18)
 
 image menu_art_m:
     subpixel True
-    "gui/menu_art_m.png"
+    "gui/poemgame/m_sticker_1.png"
     xcenter 1000
     ycenter 640
-    zoom 1.00
-    menu_art_move(1.00, 1000, 1.00)
+    zoom 1.50
+    menu_art_move(1.00, 1000, 1.50)
 
 image menu_art_y_ghost:
     subpixel True
@@ -260,7 +263,7 @@ label splashscreen:
     show intro with Dissolve(0.5, alpha=True)
     pause 2.5
     show screen tear(20, 0.1, 0.1, 0, 40)
-    play sound "sfx/s_kill_glitch1.ogg" #You can change this sound if you want
+    play sound "sfx/s_kill_glitch1.ogg"
     pause 0.25
     hide screen tear
     hide intro with Dissolve(0.5, alpha=True)
