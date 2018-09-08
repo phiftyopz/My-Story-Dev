@@ -526,8 +526,9 @@ screen main_menu():
     #    add "menu_art_n_ghost"
     #    else:
     add "menu_bg"
-        #add "menu_art_y"
-        #add "menu_art_n"
+    add "menu_art_y"
+    add "menu_art_n"
+    add "menu_art_s"
     frame:
         pass
 

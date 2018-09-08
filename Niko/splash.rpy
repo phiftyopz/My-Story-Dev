@@ -10,9 +10,9 @@ init -100 python:
         if not archive in config.archives:
             #If one is missing, throw an error and close
             renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
-    for archive in ['scripts']:
-        if archive in config.archives:
-            renpy.error("scripts.rpa detected. The mod will not work properly if scripts.rpa exists.")
+    #for archive in ['scripts']:
+    #    if archive in config.archives:
+    #        renpy.error("scripts.rpa detected. The mod will not work properly if scripts.rpa exists.")
 
 ## First, a disclaimer declaring this is a mod is shown, then there is a
 ## check for the original DDLC assets in the install folder. If those are
@@ -55,34 +55,34 @@ image menu_fade:
 image menu_art_y:
     subpixel True
     "gui/poemgame/y_sticker_2.png"
-    xcenter 600
-    ycenter 335
-    zoom 1.10
-    menu_art_move(0.54, 600, 1.10)
+    xcenter 670
+    ycenter 440
+    zoom 1.20
+    menu_art_move(0.54, 600, 1.20)
 
 image menu_art_n:
     subpixel True
     "gui/poemgame/n_sticker_1.png"
-    xcenter 750
-    ycenter 385
-    zoom 1.08
-    menu_art_move(0.58, 750, 1.08)
+    xcenter 840
+    ycenter 440
+    zoom 1.20
+    menu_art_move(0.58, 750, 1.20)
 
 image menu_art_s:
     subpixel True
     "gui/poemgame/s_sticker_1.png"
-    xcenter 510
-    ycenter 500
-    zoom 1.18
-    menu_art_move(0.68, 510, 1.18)
+    xcenter 490
+    ycenter 440
+    zoom 1.20
+    menu_art_move(0.68, 510, 1.20)
 
 image menu_art_m:
     subpixel True
     "gui/poemgame/m_sticker_1.png"
-    xcenter 1000
-    ycenter 640
-    zoom 1.50
-    menu_art_move(1.00, 1000, 1.50)
+    xcenter 1040
+    ycenter 440
+    zoom 1.20
+    menu_art_move(1.00, 1000, 1.20)
 
 image menu_art_y_ghost:
     subpixel True
