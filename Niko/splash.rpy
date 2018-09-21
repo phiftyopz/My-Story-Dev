@@ -6,13 +6,10 @@ init -100 python:
     #Check for each archive needed
     # PLEASE DO NOT EDIT THIS ARCHIVE CHECK! IF YOU TELL THE GAME TO CHECK FOR SCRIPTS.RPA HERE,
     # IT WILL INSTANTLY CRASH THE GAME!!!
-    for archive in ['audio','images','fonts']:
+    for archive in ['audio','images','fonts','scripts']:
         if not archive in config.archives:
             #If one is missing, throw an error and close
-            renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
-    #for archive in ['scripts']:
-    #    if archive in config.archives:
-    #        renpy.error("scripts.rpa detected. The mod will not work properly if scripts.rpa exists.")
+            renpy.error("One or more .rpa files missing or corrupt. Please reinstall DDLC and My Story.")
 
 ## First, a disclaimer declaring this is a mod is shown, then there is a
 ## check for the original DDLC assets in the install folder. If those are
@@ -31,7 +28,7 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 ##Here's where you can change the logo file to whatever you want
 image menu_logo:
-    "/mod_assets/ddms.png"
+    "ddms_new.png"
     subpixel True
     xcenter 240
     ycenter 120
@@ -40,12 +37,12 @@ image menu_logo:
 
 image menu_bg:
     topleft
-    "gui/menu_bg.png"
+    "menu_bg_new.png"
     menu_bg_move
 
 image game_menu_bg:
     topleft
-    "gui/menu_bg.png"
+    "menu_bg_new.png"
     menu_bg_loop
 
 image menu_fade:
@@ -192,7 +189,7 @@ image intro:
     truecenter
     "white"
     0.5
-    "mod_assets/es.png" with Dissolve(0.5, alpha=True)
+    "es.png" with Dissolve(0.5, alpha=True)
     2.5
     "white" with Dissolve(0.5, alpha=True)
     0.5

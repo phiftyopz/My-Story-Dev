@@ -195,7 +195,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("textbox_new.png", xalign=0.5, yalign=1.0)
 
 style window_monika is window:
     background Image("gui/textbox_monika.png", xalign=0.5, yalign=1.0)
@@ -527,8 +527,8 @@ screen main_menu():
     #    else:
     add "menu_bg"
     add "menu_art_y"
-    add "menu_art_n"
     add "menu_art_s"
+    add "menu_art_n"
     frame:
         pass
 
