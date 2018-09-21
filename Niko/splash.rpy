@@ -122,7 +122,7 @@ image menu_art_s_glitch:
     menu_art_move(.8, 470, .8)
 
 image menu_nav:
-    "gui/overlay/main_menu.png"
+    "main_menu_new.png"
     menu_nav_move
 
 image menu_particles:
