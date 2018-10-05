@@ -1,0 +1,16 @@
+body{
+    background-color: pink;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1em;
+}
+body h1{
+    color: #CE8964;
+    font-size: 64px;
+    text-align: center;
+    border: 1em solid;
+}
+div p{
+    text-align: center;
+    border: 1em solid;
+    padding: 10px;
+}
