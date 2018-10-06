@@ -12,8 +12,6 @@ label ch0_main:
     else:
         pass
     if prr is False:
-        "Month is [month]"
-        "Day is [day]"
         "The Alpha will go live on October 15. Quitting to desktop."
         $ renpy.quit()
     elif prr is True:
