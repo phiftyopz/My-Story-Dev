@@ -6,16 +6,12 @@ init:
 label ch0_main:
     
     define prr = False
-    if month >= "10" and day >= "15":
-        define prr = True
-        pass
-    else:
-        pass
-    if prr is False:
-        "The Alpha will go live on October 15. Quitting to desktop."
-        $ renpy.quit()
-    elif prr is True:
-        "The Alpha is now live. Please update to the latest version from GitHub."
-        "Quitting to desktop."
-        $ renpy.quit()
+    "Day: [day] Month: [month]"
+    if day < 15:
+        "The Alpha will be released on October 15th."
+        "The game will now quit."
+    elif day > 14:
+        "The Alpha is now available. Please update the mod from GitHub."
+        "The game will now quit."
+    $ renpy.quit()
     return
