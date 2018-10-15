@@ -26,7 +26,7 @@ label start:
     #Here is an example of how you might do that
     if persistent.playthrough == 0:
         #Call example script
-        call ch0
+        call modstart
 
     if persistent.playthrough == 1:
         #Stuff here will only play after you increased the playthrough count
