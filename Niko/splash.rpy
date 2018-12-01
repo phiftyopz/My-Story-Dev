@@ -6,7 +6,7 @@ init -100 python:
     #Check for each archive needed
     # PLEASE DO NOT EDIT THIS ARCHIVE CHECK! IF YOU TELL THE GAME TO CHECK FOR SCRIPTS.RPA HERE,
     # IT WILL INSTANTLY CRASH THE GAME!!!
-    for archive in ['audio','images','fonts','scripts']:
+    for archive in ['audio','images','fonts','scripts','mystory_mod']:
         if not archive in config.archives:
             #If one is missing, throw an error and close
             renpy.error("One or more .rpa files missing or corrupt. Please reinstall DDLC and My Story.")
